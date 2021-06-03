@@ -1,0 +1,53 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+  }
+
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+ 
+button,
+input {
+  border: none;
+  background: none;
+  outline: none;
+  color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
+
+.formdiv{
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#form{
+    flex-direction: column;
+}
+
+
+.svgicon{
+    margin: 0;
+    padding: 0;
+    width: 35px;
+    height: 30px;
+}

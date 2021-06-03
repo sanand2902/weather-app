@@ -54,8 +54,8 @@ const formatCard = (location, current)=>{
     </ul>
     </div>
     <div class="card-content grey lighten-4">
-    <div id="test4"><li>Date: ${dateConverter(current.dt)} </li>
-    <li>Current Temperature: ${current.temp}  </li> <li> Feels Like: ${current.feels_like} </li></div>
+    <div id="test4"><li>Recorded Date: ${dateConverter(current.dt)} </li>
+    <li>Current Temperature: ${Math.ceil(current.temp - 273)}C  </li> <li> Feels Like: ${Math.ceil(current.feels_like - 273)}C </li></div>
     <div id="test5"><li>Sunrise: ${timeConverter(current.sunrise)} </li> <li> Sunset: ${timeConverter(current.sunset)} </li>
     </div>
     <div id="test6"><li>Pressure: ${current.pressure} </li> <li> Humdity: ${current.humidity} </li>

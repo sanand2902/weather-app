@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="grey darken-4 grey-text text-lighten-3">
+    <div class="container">
+        <h1 class="center">Weather Forecasting App</h1>
+        <div class="container formdiv">
+            <form id="form" class="center">
+                <input class="grey-text text-lighten-3" type="text" id="search" placeholder="Location">
+                <button class="btn" type="submit" id="btn">Search</button>
+            </form>
+            <br/>
+        </div>
+
+
+        <!-- <section id="location">
+            <h5>Location:</h5><h6>Bhagalpur, Bihar, India</h6>
+        </section>
+        <section id="current">
+            <ul>
+                <li>Date: Wed Jun 02 2021 02:40:14 </li>
+                <li>Current Temperature: 32 C  \t </li> <li> Feels Like: 35 C </li>
+                <li>Sunrise: Wed Jun 02 2021 02:40:14 \t </li> <li> Sunset: Wed Jun 02 2021 02:40:14 </li>
+                <li>Pressure: Some value \t </li> <li> Humdity: xyz </li>
+                <li>Weather: clear sky </li>
+            </ul>
+        </section>   -->
+        
+            <div class="row" id="current">
+                
+                <!-- <div class="col s6 offset-s3 grey-text text-darken-3">
+                    <div class="card small">
+                        <div class="card-content blue">
+                            <span class="flow-text">
+                                <b>Location:</b>
+                            Bhagalpur, Bihar, India
+                            </span>
+                        </div>
+                        <div class="card-tabs">
+                            <ul class="tabs tabs-fixed-width">
+                                <li class="tab"><a href="#test4">Current</a></li>
+                                <li class="tab"><a href="#test5">The Sun</a></li>
+                                <li class="tab"><a href="#test6">Environment</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-content grey lighten-4">
+                        <div id="test4"><li>Date: Wed Jun 02 2021 02:40:14 </li>
+                            <li>Current Temperature: 32 C  </li> <li> Feels Like: 35 C </li></div>
+                        <div id="test5">                <li>Sunrise: Wed Jun 02 2021 02:40:14 </li> <li> Sunset: Wed Jun 02 2021 02:40:14 </li>
+                        </div>
+                        <div id="test6"><li>Pressure: Some value </li> <li> Humdity: xyz </li>
+                            <li>Weather: clear sky </li></div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div id="result"  class="grey darken-4 grey-text text-lighten-3">
+                <!-- <ul class="collection with-header" id="forecast-collection">
+                    <li class="collection-header blue"><h4>Weather Forecast for 7 days</h4></li>
+                    <li class="collection-item grey-text text-darken-3 valign-wrapper">
+                        <img class="svgicon" src="img/cloudy-day-1.svg" alt="" srcset=""> 
+                            12 May 2021
+                        
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+    
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            Temp: 32C to 40C
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            &#160;
+                            Cloudy Wweath
+                        </li>
+                    <li class="collection-item grey-text text-darken-3">Alvin</li>
+                    <li class="collection-item grey-text text-darken-3">Alvin</li>
+                    <li class="collection-item grey-text text-darken-3">Alvin</li>
+                    <li class="collection-item grey-text text-darken-3">Alvin</li>
+                  </ul> -->
+                        
+            </div>
+        
+
+            
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+    
+
+
+    <script src="js/materialize.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

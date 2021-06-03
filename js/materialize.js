@@ -1189,6 +1189,7 @@ M.AutoInit = function (context) {
   };
 
   for (var pluginName in registry) {
+    // console.log(pluginName)
     var plugin = M[pluginName];
     plugin.init(registry[pluginName]);
   }

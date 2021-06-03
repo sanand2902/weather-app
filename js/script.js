@@ -8,6 +8,9 @@ const form = document.getElementById('form')
 const _current = document.getElementById('current')
 const _btn = document.getElementById('btn')
 const _result = document.getElementById('result')
+const _mode = document.getElementById('themeMode')
+const _body = document.getElementsByTagName('body')[0]
+
 const url = 'https://weather-samaranand.herokuapp.com/'
 
 
@@ -252,8 +255,25 @@ form.addEventListener('submit', e=>{
     _btn.disabled = false
 })
 
+form.addEventListener('reset', e=>{
+    // e.preventDefault()
+    _current.innerHTML = ''
+    _result.innerHTML = ''
+})
 
-
+_mode.addEventListener('click', e=>{
+    e.preventDefault()
+    const flag = _mode.innerText === 'brightness_5'
+    _mode.innerText =  flag ? 'brightness_4' : 'brightness_5';
+    if(!flag){
+        _body.classList.replace('darken-4', 'lighten-3')
+        _body.classList.replace('text-lighten-3', 'text-darken-4')
+    } else {
+        _body.classList.replace('lighten-3','darken-4')
+        _body.classList.replace('text-darken-4', 'text-lighten-3')
+    }
+    
+})
 
 
 
